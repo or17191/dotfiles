@@ -1,0 +1,9 @@
+[core]
+	editor = nvim
+[push]
+	default = simple
+[alias]
+	tree = log --graph --decorate --oneline --all
+	fpush = push --force-with-lease
+[include]
+	path = ~/.gitconfig-private
