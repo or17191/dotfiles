@@ -1,9 +1,24 @@
+# Validate by running `git config --global -l --include`
 [core]
 	editor = nvim
 [push]
 	default = simple
 [alias]
-	tree = log --graph --decorate --oneline --all
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	fpush = push --force-with-lease
+	fast-amend = commit -a --no-edit --amend
+	diff-word = diff --word-diff=color
+	fixup = commit -a -m fixup
 [include]
 	path = ~/.gitconfig-private
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
+[pager]
+	branch = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
