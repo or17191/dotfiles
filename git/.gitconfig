@@ -9,6 +9,7 @@
 	fast-amend = commit -a --no-edit --amend
 	diff-word = diff --word-diff=color
 	fixup = commit -a -m fixup
+	prune-all = fetch --all --prune
 [include]
 	path = ~/.gitconfig-private
 [init]
