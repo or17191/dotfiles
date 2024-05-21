@@ -111,5 +111,6 @@ compinit
 export PATH="$HOME/go/bin:/usr/local/go/bin:$HOME/.poetry/bin:$PATH"
 
 alias black="python3 -m black"
+alias decode-jwt='jq -R "split(\".\") | .[1] | @base64d | fromjson"'
 
 [ -f "$HOME/.zshrc-private" ] && source "$HOME/.zshrc-private"
