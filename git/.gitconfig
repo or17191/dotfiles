@@ -10,6 +10,10 @@
 	diff-word = diff --word-diff=color
 	fixup = commit -a -m fixup
 	prune-all = fetch --all --prune
+	push-origin = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+	align-submodules = submodule update --init --recursive --checkout
+	fzco = "!git branch | awk '$1 != \"*\" { print $1 }' | fzf --height=20% --reverse --print0 --info=inline | xargs -0 git checkout"
+	fzdel = "!git branch | awk '$1 != \"*\" { print $1 }' | fzf --height=20% --reverse --print0 --info=inline | xargs -0 git branch -d"
 [include]
 	path = ~/.gitconfig-private
 [init]
@@ -23,3 +27,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[rebase]
+	updateRefs = true
