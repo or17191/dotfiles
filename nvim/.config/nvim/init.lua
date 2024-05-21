@@ -72,6 +72,8 @@ vim.g.ale_fixers = {
 	go = { "gofumpt", "goimports", "golines" },
 	cmake = { "cmakeformat" },
 	lua = { "stylua" },
+	zsh = { "shfmt" },
+	yaml = { "prettier" },
 }
 vim.g.ale_linters = {
 	cpp = { "clangtidy", "clangd", "gcc", "flawfinder" },
