@@ -73,6 +73,7 @@ vim.g.ale_fixers = {
 	cmake = { "cmakeformat" },
 	lua = { "stylua" },
 	zsh = { "shfmt" },
+	sh = { "shfmt" },
 	yaml = { "prettier" },
 }
 vim.g.ale_linters = {
@@ -97,3 +98,4 @@ vim.api.nvim_set_keymap("n", "<leader>n", ":ALENextWrap<cr>", { noremap = true, 
 
 -- Other settings
 vim.g.gitgutter_sign_removed_first_line = "^_"
+vim.g.ale_sh_shfmt_options = "-i 2"
