@@ -45,11 +45,11 @@ return {
 			vim.g.ale_sh_shfmt_options = "-i 2"
 			vim.g.ale_hover_cursor = 0
 
-			vim.api.nvim_set_keymap("n", "<leader>f", ":ALEFix<cr>", { noremap = true, silent = true })
-			vim.api.nvim_set_keymap("n", "<leader>h", ":ALEHover<cr>", { noremap = true, silent = true })
-			vim.api.nvim_set_keymap("n", "<leader>d", ":ALEDetail<cr>", { noremap = true, silent = true })
-			vim.api.nvim_set_keymap("n", "<leader>p", ":ALEPreviousWrap<cr>", { noremap = true, silent = true })
-			vim.api.nvim_set_keymap("n", "<leader>n", ":ALENextWrap<cr>", { noremap = true, silent = true })
+			vim.api.nvim_set_keymap("n", "<localleader>f", ":ALEFix<cr>", { noremap = true, silent = true })
+			vim.api.nvim_set_keymap("n", "<localleader>h", ":ALEHover<cr>", { noremap = true, silent = true })
+			vim.api.nvim_set_keymap("n", "<localleader>d", ":ALEDetail<cr>", { noremap = true, silent = true })
+			vim.api.nvim_set_keymap("n", "<localleader>p", ":ALEPreviousWrap<cr>", { noremap = true, silent = true })
+			vim.api.nvim_set_keymap("n", "<localleader>n", ":ALENextWrap<cr>", { noremap = true, silent = true })
 		end,
 	},
 }
