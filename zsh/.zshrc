@@ -116,3 +116,15 @@ alias decode-jwt='jq -R "split(\".\") | .[1] | @base64d | fromjson"'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -f "$HOME/.zshrc-private" ] && source "$HOME/.zshrc-private"
+
+function evacuate-port() {
+  local port="$1"
+  local signal="${2:-9}"
+  local pid="$(lsof -t -i"TCP:${port}")"
+  if [ -z "$pid" ]; then
+    echo "No process is holding port ${port}" >&1
+    return 1
+  fi
+  ps -p "$pid"
+  kill -"$signal" "$pid"
+}

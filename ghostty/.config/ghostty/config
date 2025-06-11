@@ -1,0 +1,5 @@
+theme = light:Builtin Light,dark:Dracula
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+

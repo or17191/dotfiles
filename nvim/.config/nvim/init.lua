@@ -34,6 +34,7 @@ vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.number = true
 vim.opt.colorcolumn = "80"
+vim.opt.expandtab = true
 vim.filetype.add({
 	extension = {
 		i = "cpp",
