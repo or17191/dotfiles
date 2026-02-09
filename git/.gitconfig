@@ -12,8 +12,8 @@
 	prune-all = fetch --all --prune
 	push-origin = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 	align-submodules = submodule update --init --recursive --checkout
-	fzco = "!git branch | awk '$1 != \"*\" { print $1 }' | fzf --height=20% --reverse --print0 --info=inline | xargs -0 git checkout"
-	fzdel = "!git branch | awk '$1 != \"*\" { print $1 }' | fzf --height=20% --reverse --print0 --info=inline | xargs -0 git branch -d"
+	fzco = "!git branch | awk '$1 != \"*\" && $1 != \"+\" { print $1 }' | fzf --height=20% --reverse --print0 --info=inline | xargs -0 git checkout"
+	fzdel = "!git branch | awk '$1 != \"*\" && $1 != \"+\" { print $1 }' | fzf --height=20% --reverse --print0 --info=inline | xargs -0 git branch -d"
 	fzconflict = "!git diff --name-only --diff-filter=U --relative | fzf --height=20% --reverse --print0 --info=inline | xargs -0 git add"
 [include]
 	path = ~/.gitconfig-private
